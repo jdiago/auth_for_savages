@@ -1,0 +1,2 @@
+module SavagesHelper
+end

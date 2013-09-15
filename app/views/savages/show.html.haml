@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @savage.name
+
+= link_to 'Edit', edit_savage_path(@savage)
+\|
+= link_to 'Back', savages_path

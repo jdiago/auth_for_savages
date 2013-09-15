@@ -1,0 +1,19 @@
+%h1 Listing savages
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @savages.each do |savage|
+    %tr
+      %td= savage.name
+      %td= link_to 'Show', savage
+      %td= link_to 'Edit', edit_savage_path(savage)
+      %td= link_to 'Destroy', savage, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Savage', new_savage_path
