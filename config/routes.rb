@@ -1,4 +1,8 @@
 AuthForSavages::Application.routes.draw do
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  delete '/logout' => 'sessions#destroy'
+
   resources :users
 
   resources :savages
@@ -43,7 +47,7 @@ AuthForSavages::Application.routes.draw do
   #       get 'recent', on: :collection
   #     end
   #   end
-  
+
   # Example resource route with concerns:
   #   concern :toggleable do
   #     post 'toggle'
