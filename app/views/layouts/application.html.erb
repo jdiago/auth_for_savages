@@ -21,8 +21,22 @@
   </head>
 
   <body>
-
-    <%= yield %>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to 'Auth for Savages', savages_path %></h1>
+        </li>
+      </ul>
+    </nav>
+    <div class="row">
+      <div class="large-8 columns">
+        <%= yield %>
+      </div>
+      <div class="large-4 columns">
+        <h2>About this</h2>
+        <p>Only savages would use this...</p>
+      </div>
+    </div>
 
     <%= javascript_include_tag "application" %>
   </body>
